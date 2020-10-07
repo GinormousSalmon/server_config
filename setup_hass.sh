@@ -3,8 +3,15 @@
 apt update -y
 apt upgrade -y
 apt install python3-dev python3-pip python3-venv libffi-dev libssl-dev -y
+
+cd /opt/homeassistant
+python3 -m venv /opt/homeassistant
+source bin/activate
+
 python3 -m pip install wheel -y
 pip3 install homeassistant -y
+
+rm /etc/systemd/system/hass.service
 
 echo "[Unit]" >> /etc/systemd/system/hass.service
 echo "Description=Home Assistant" >> /etc/systemd/system/hass.service
