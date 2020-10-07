@@ -4,12 +4,17 @@ apt update -y
 apt upgrade -y
 apt install python3-dev python3-pip python3-venv libffi-dev libssl-dev -y
 
+adduser --system homeassistant && addgroup homeassistant
+adduser homeassistant dialout
+mkdir /opt/homeassistant
+chown homeassistant:homeassistant /opt/homeassistant
+
 cd /opt/homeassistant
 python3 -m venv /opt/homeassistant
 source bin/activate
 
-python3 -m pip install wheel -y
-pip3 install homeassistant -y
+python3 -m pip install wheel
+pip3 install homeassistant
 
 rm /etc/systemd/system/hass.service
 
