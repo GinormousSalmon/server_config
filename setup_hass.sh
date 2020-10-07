@@ -1,11 +1,10 @@
 #!/bin/bash
-yes | command-that-asks-for-input
 
-apt update
-apt upgrade
-apt install python3-dev python3-pip python3-venv libffi-dev libssl-dev
-python3 -m pip install wheel
-pip3 install homeassistant
+apt update -y
+apt upgrade -y
+apt install python3-dev python3-pip python3-venv libffi-dev libssl-dev -y
+python3 -m pip install wheel -y
+pip3 install homeassistant -y
 
 echo "[Unit]" >> /etc/systemd/system/hass.service
 echo "Description=Home Assistant" >> /etc/systemd/system/hass.service
