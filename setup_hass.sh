@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo -i
+
 apt update -y
 apt upgrade -y
 apt install python3-dev python3-pip python3-venv libffi-dev libssl-dev -y
