@@ -9,6 +9,7 @@ apt install python3-dev python3-pip python3-venv libffi-dev libssl-dev -y
 adduser --system homeassistant && addgroup homeassistant
 adduser homeassistant dialout
 mkdir /opt/homeassistant
+mkdir /opt/homeassistant/config
 chown homeassistant:homeassistant /opt/homeassistant
 
 cd /opt/homeassistant
