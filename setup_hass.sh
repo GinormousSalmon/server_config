@@ -10,6 +10,9 @@ sudo mkdir /opt/homeassistant
 sudo mkdir /opt/homeassistant/config
 sudo chown homeassistant:homeassistant /opt/homeassistant
 
+sudo su -s /bin/bash root
+sudo rm /etc/systemd/system/hass.service
+
 sudo su -s /bin/bash homeassistant
 cd /opt/homeassistant
 python3 -m venv /opt/homeassistant
@@ -17,9 +20,6 @@ source bin/activate
 
 python3 -m pip install wheel
 pip3 install homeassistant
-
-sudo su -s /bin/bash root
-sudo rm /etc/systemd/system/hass.service
 
 echo "[Unit]" >> /etc/systemd/system/hass.service
 echo "Description=Home Assistant" >> /etc/systemd/system/hass.service
