@@ -31,7 +31,7 @@ echo "" >> /etc/systemd/system/hass.service
 
 echo "[Service]" >> /etc/systemd/system/hass.service
 echo "Type=simple" >> /etc/systemd/system/hass.service
-echo "ExecStart=hass -c --log-file /opt/homeassistant/hass.log" >> /etc/systemd/system/hass.service
+echo "ExecStart=hass --log-file /opt/homeassistant/hass.log" >> /etc/systemd/system/hass.service
 echo "" >> /etc/systemd/system/hass.service
 
 echo "[Install]" >> /etc/systemd/system/hass.service
