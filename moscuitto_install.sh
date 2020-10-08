@@ -11,3 +11,5 @@ apt-get install mosquitto-clients -y
 echo "allow_anonymous false" >> /etc/mosquitto/mosquitto.conf
 echo "password_file /etc/mosquitto/mosquitto.pwd" >> /etc/mosquitto/mosquitto.conf
 
+# mosquitto_passwd -c /etc/mosquitto/mosquitto.pwd leo
+# service mosquitto restart
