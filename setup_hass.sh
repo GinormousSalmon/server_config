@@ -14,8 +14,8 @@ sudo mkdir /opt/homeassistant
 
 # sudo su -s /bin/bash homeassistant
 cd /opt/homeassistant
-python3 -m venv /opt/homeassistant
-source bin/activate
+# python3 -m venv /opt/homeassistant
+# source bin/activate
 
 python3 -m pip install wheel
 pip3 install homeassistant
