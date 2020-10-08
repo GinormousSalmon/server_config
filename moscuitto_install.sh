@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# curl "https://raw.githubusercontent.com/GinormousSalmon/server_config/main/setup_hass.sh" | bash -s
+# curl "https://raw.githubusercontent.com/GinormousSalmon/server_config/main/moscuitto_install.sh" | bash -s
 
 apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
 apt-get update
